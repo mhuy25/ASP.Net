@@ -1,0 +1,257 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/templates/simple-sidebar)
+ * Copyright 2013-2020 Start Bootstrap
+ * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-simple-sidebar/blob/master/LICENSE)
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+#wrapper {
+    overflow-x: hidden;
+ }
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -15rem;
+  -webkit-transition: margin .25s ease-out;
+  -moz-transition: margin .25s ease-out;
+  -o-transition: margin .25s ease-out;
+  transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+  width: 15rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    margin-left: -15rem;
+  }
+}
+
+/* POPUP MODAL FORM */
+.modal-content{
+    height: 450px;
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+}
+
+input[type="datetime-local"]:before {
+    content: attr(placeholder) !important;
+    color: #aaa;
+    margin-right: 0.5em;
+  }
+  input[type="datetime-local"]:focus:before,
+  input[type="datetime-local"]:valid:before {
+    content: "";
+}
+
+#job_form div{
+    padding-top: 10px
+}
+
+
+.error_label{
+    color:red;
+    margin: 5px;
+}
+
+/*  */
+
+/* TABLE EMPLOYEE IN MODAL FORM */ 
+        
+    
+    .table_employee{
+        overflow:scroll;
+        height: 300px;
+    }
+    #modal_body{
+        overflow-x:scroll;
+        overflow-y:scroll;
+        height:auto;
+    }
+   
+    #insert_employee_form,
+    #add_job_form,
+    #edit_job_form {
+      background: #F9F9F9;
+      padding: 25px;
+      box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    }
+        
+
+    fieldset {
+      border: medium none !important;
+      margin: 0 0 10px;
+      min-width: 100%;
+      padding: 0;
+      width: 100%;
+    }
+    #insert_employee_form input[type="text"],
+    #insert_employee_form input[type="email"],
+    #insert_employee_form input[type="password"],
+    #add_job_form input[type="text"], 
+    #edit_job_form input[type="text"],
+    select, 
+    input[type="datetime-local"]{
+      width: 100%;
+      border: 1px solid #ccc;
+      background: #FFF;
+      margin: 0 0 5px;
+      padding: 10px;
+    }
+
+    #error{
+        color: red;
+    }
+
+    #insert_employee_form input[type="text"]:hover,
+    #add_job_form input[type="text"]:hover,
+    #edit_job_form input[type="text"]:hover,
+    #add_job_form input[type="datetime-local"]:hover,
+    #edit_job_form input[type="datetime-local"]:hover,
+    #add_job_form select:hover,
+    #edit_job_form select:hover{
+      -webkit-transition: border-color 0.3s ease-in-out;
+      -moz-transition: border-color 0.3s ease-in-out;
+      transition: border-color 0.3s ease-in-out;
+      border: 1px solid #aaa;
+    }
+    #insert_employee_form input:focus,
+    #add_job_form input:focus, 
+    #edit_job_form input:focus {
+      outline: 0;
+      border: 1px solid #aaa;
+    }
+    
+
+    ::-webkit-input-placeholder {
+      color: #888;
+    }
+
+    :-moz-placeholder {
+      color: #888;
+    }
+
+    ::-moz-placeholder {
+      color: #888;
+    }
+
+    :-ms-input-placeholder {
+      color: #888;
+    }
+/* TABLE EMPLOYEE IN MODAL FORM*/
+
+/* OPEN MODAL FUNCTION */
+.in{
+    display: block;
+    padding-right: 17px;
+}
+
+.task{
+    width: 100%;
+    background: rgba(42, 42, 42, 0.50);
+    padding: 18px;
+    margin: 6px 0;
+    overflow: hidden;
+}
+
+.task i{
+    float: right;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.comp .task{
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+/* OPEN MODAL FUNCTION */
+
+/* TABLE */
+#add_row{
+   color: white;
+}
+
+.table-responsive{
+    overflow:scroll;
+    height:400px;
+}
+
+.panel-table .panel-body{
+  padding:0;
+}
+
+.panel-table .panel-body .table-bordered{
+  border-style: none;
+  margin:0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type {
+    text-align:center;
+    width: 100px;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:last-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:last-of-type {
+  border-right: 0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr > th:first-of-type,
+.panel-table .panel-body .table-bordered > tbody > tr > td:first-of-type {
+  border-left: 0;
+}
+
+.panel-table .panel-body .table-bordered > tbody > tr:first-of-type > td{
+  border-bottom: 0;
+}
+
+.panel-table .panel-body .table-bordered > thead > tr:first-of-type > th{
+  border-top: 0;
+}
+
+.panel-table .panel-footer .pagination{
+  margin:0; 
+}
+
+/*
+used to vertically center elements, may need modification if you're not using default sizes.
+*/
+.panel-table .panel-footer .col{
+ line-height: 34px;
+ height: 34px;
+}
+
+.panel-table .panel-heading .col h3{
+ line-height: 30px;
+ height: 30px;
+}
+
+.panel-table .panel-body .table-bordered > tbody > tr > td{
+  line-height: 34px;
+}
+/* */

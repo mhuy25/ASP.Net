@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C66E8624-6B5A-4CDD-9DCD-524C4EF9B772}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TodoList</RootNamespace>
+    <AssemblyName>TodoList</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Dashboard.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="file.png" />
+    <Content Include="GUI\Dashboard_Page\Load_Content.aspx" />
+    <Content Include="GUI\Dashboard_Page\transfer_data.aspx" />
+    <Content Include="GUI\Script\jquery.validate.min.js.map">
+      <DependentUpon>jquery.validate.min.js</DependentUpon>
+    </Content>
+    <Content Include="GUI\Script\bootstrap.bundle.js.map" />
+    <Content Include="GUI\CSS\bootstrap.min.css.map" />
+    <Content Include="GUI\Script\bootstrap.min.js.map" />
+    <Content Include="GUI\Script\bootstrap.bundle.min.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Global.asax" />
+    <Content Include="GUI\CSS\all.css" />
+    <Content Include="GUI\CSS\all.min.css" />
+    <Content Include="GUI\CSS\bootstrap.css" />
+    <Content Include="GUI\CSS\bootstrap.min.css" />
+    <Content Include="GUI\CSS\Login.css" />
+    <Content Include="GUI\CSS\MainPage.css" />
+    <Content Include="GUI\CSS\main_page.css" />
+    <Content Include="GUI\CSS\simple-sidebar.css" />
+    <Content Include="GUI\Dashboard_Page\dashboard_page.aspx" />
+    <Content Include="GUI\Login\Login.aspx" />
+    <Content Include="GUI\MainPage\MainPage.aspx" />
+    <Content Include="GUI\Pictures\job_64px.png" />
+    <Content Include="GUI\Script\bootstrap.bundle.min.js" />
+    <Content Include="GUI\Script\jquery-1.11.1.min.js" />
+    <Content Include="GUI\Script\jquery.min.js" />
+    <Content Include="GUI\Script\jquery.validate.js" />
+    <Content Include="GUI\Script\jquery.validate.min.js">
+      <DependentUpon>jquery.validate.js</DependentUpon>
+    </Content>
+    <Content Include="GUI\Script\login_page.js" />
+    <Content Include="GUI\Script\main_page.js" />
+    <Content Include="GUI\Script\shieldui-all.min.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dashboard_Page\dashboard_page.aspx.cs">
+      <DependentUpon>dashboard_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Dashboard_Page\dashboard_page.aspx.designer.cs">
+      <DependentUpon>dashboard_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dashboard_Page\Load_Content.aspx.cs">
+      <DependentUpon>Load_Content.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Dashboard_Page\Load_Content.aspx.designer.cs">
+      <DependentUpon>Load_Content.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dashboard_Page\transfer_data.aspx.cs">
+      <DependentUpon>transfer_data.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Dashboard_Page\transfer_data.aspx.designer.cs">
+      <DependentUpon>transfer_data.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\MainPage\MainPage.aspx.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\MainPage\MainPage.aspx.designer.cs">
+      <DependentUpon>MainPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BLL\CommentBLL.cs" />
+    <Compile Include="Models\BLL\EmployeeBLL.cs" />
+    <Compile Include="Models\BLL\JobBLL.cs" />
+    <Compile Include="Models\BLL\JobEmployeeBLL.cs" />
+    <Compile Include="Models\BLL\Login.cs" />
+    <Compile Include="Models\BLL\Register.cs" />
+    <Compile Include="Models\BLL\RoleBLL.cs" />
+    <Compile Include="Models\DAL\CommentDAL.cs" />
+    <Compile Include="Models\DAL\Connection.cs" />
+    <Compile Include="Models\DAL\EmployeeDAL.cs" />
+    <Compile Include="Models\DAL\JobDAL.cs" />
+    <Compile Include="Models\DAL\JobEmployeeDAL.cs" />
+    <Compile Include="Models\DAL\RoleDAL.cs" />
+    <Compile Include="Models\DTO\Comment.cs" />
+    <Compile Include="Models\DTO\Employee.cs" />
+    <Compile Include="Models\DTO\Job.cs" />
+    <Compile Include="Models\DTO\JobEmployee.cs" />
+    <Compile Include="Models\DTO\MyJSON.cs" />
+    <Compile Include="Models\DTO\Role.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>6290</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:5121/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
